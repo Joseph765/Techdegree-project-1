@@ -1,4 +1,4 @@
-var quoteArray = [
+var quotes = [
 
   {
     Quote: 'A successful website does three things It attracts the right kinds of visitors. Guides them to the main services or product you offer. Collect Contact details for future ongoing relation.',
@@ -9,12 +9,12 @@ var quoteArray = [
     Person: 'Cameron moll'
   },
   {
-    Quote: 'Creating your own portfolio takes time. First you have to choose the technologies among the overwhelming amount of options we have. Am I going to go for React? Angular? PHP? Ruby? What about SEO? Should I try node? What them, where do I host? Once you decided and set everything up, you’ve got to list all your projects manually, add the descriptions, links, images and decide on a design that shows your very best. Suddenly, the simple task of creating a pretty portfolio is overwhelming.',
-    Person: 'Pedro Silva Moreira'
+    Quote: 'A brilliant solution to the wrong problem can be worse than no solution at all: Solve the correct problem.',
+    Person: 'Donald A. Norman, The Design of Everyday Things. November 5 2013'
   },
   {
-    Quote: 'Getting a quality website is not an expenses but rather an investment.',
-    Person: 'Dr. Christopher Dayagdag'
+    Quote: '“Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of complexity to design and develop websites.',
+    Person: 'Jacob Lett, Bootstrap 4 Quick Start: Responsive Web Design and Development Basics for Beginners'
   },
   {
     Quote: 'Measuring programming progress by lines of code is like measuring aircraft building progress by weight.',
@@ -22,3 +22,11 @@ var quoteArray = [
   }
 
 ];
+
+function getRandomQuote() {
+
+}
+
+function printQuote() {
+
+}
