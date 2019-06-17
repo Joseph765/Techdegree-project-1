@@ -1,3 +1,6 @@
+var randomNumber;
+var quote;
+
 var quotes = [
 
   {
@@ -26,10 +29,16 @@ var quotes = [
 
 ];
 
+function getRandomNumber(x) {
+  return Math.floor( Math.random() * x ) + 1;
+}
+
 function getRandomQuote() {
-  
+  randomNumber = getRandomNumber(4);
+  var quote = quotes[randomNumber];
+  return quote;
 }
 
 function printQuote() {
-
+  quotes = getRandomQuote();
 }
