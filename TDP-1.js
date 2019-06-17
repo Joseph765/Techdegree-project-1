@@ -10,11 +10,14 @@ var quotes = [
   },
   {
     Quote: 'A brilliant solution to the wrong problem can be worse than no solution at all: Solve the correct problem.',
-    Person: 'Donald A. Norman, The Design of Everyday Things. November 5 2013'
+    Person: 'Donald A. Norman',
+    Citation: 'The Design of Everyday Things',
+    Year: 'November 5 2013'
   },
   {
-    Quote: '“Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of complexity to design and develop websites.',
-    Person: 'Jacob Lett, Bootstrap 4 Quick Start: Responsive Web Design and Development Basics for Beginners'
+    Quote: 'Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of complexity to design and develop websites.',
+    Person: 'Jacob Lett',
+    Citation: 'Bootstrap 4 Quick Start: Responsive Web Design and Development Basics for Beginners'
   },
   {
     Quote: 'Measuring programming progress by lines of code is like measuring aircraft building progress by weight.',
@@ -24,7 +27,7 @@ var quotes = [
 ];
 
 function getRandomQuote() {
-
+  
 }
 
 function printQuote() {
