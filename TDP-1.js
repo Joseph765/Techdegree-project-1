@@ -1,5 +1,8 @@
 var randomNumber;
-var quote;
+var quote = document.getElementById('quote');
+var source = document.getElementById('source');
+var citation = document.getElementById('citation');
+var year = document.getElementById('year');
 
 var quotes = [
 
@@ -35,10 +38,12 @@ function getRandomNumber(x) {
 
 function getRandomQuote() {
   randomNumber = getRandomNumber(4);
-  var quote = quotes[randomNumber];
-  return quote;
+  var quoteBlock = quotes[randomNumber];
+  return quoteBlock;
 }
 
 function printQuote() {
-  quotes = getRandomQuote();
+  quote.textContent = getRandomQuote();
 }
+
+printQuote();
