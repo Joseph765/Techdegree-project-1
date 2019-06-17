@@ -3,7 +3,7 @@ var quote = document.getElementById('quote');
 var source = document.getElementById('source');
 var citation = document.getElementById('citation');
 var year = document.getElementById('year');
-
+1 
 var quotes = [
 
   {
