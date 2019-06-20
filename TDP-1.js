@@ -1,10 +1,9 @@
-var randomNumber;
-var quote = document.getElementById('quote');
-var source = document.getElementById('source');
-var citation = document.getElementById('citation');
-var year = document.getElementById('year');
-1 
-var quotes = [
+let randomNumber;
+let quote = document.getElementById('quote');
+let source = document.getElementById('source');
+let citation = document.getElementById('citation');
+let year = document.getElementById('year');
+const quotes = [
 
   {
     Quote: 'A successful website does three things It attracts the right kinds of visitors. Guides them to the main services or product you offer. Collect Contact details for future ongoing relation.',
@@ -32,13 +31,13 @@ var quotes = [
 
 ];
 
-function getRandomNumber(x) {
+function getRanletdomNumber(x) {
   return Math.floor( Math.random() * x ) + 1;
 }
 
 function getRandomQuote() {
   randomNumber = getRandomNumber(4);
-  var quoteBlock = quotes[randomNumber];
+  let quoteBlock = quotes[randomNumber];
   return quoteBlock;
 }
 
