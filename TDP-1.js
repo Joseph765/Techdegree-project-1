@@ -31,7 +31,7 @@ const quotes = [
 
 ];
 
-function getRanletdomNumber(x) {
+function getRandomNumber(x) {
   return Math.floor( Math.random() * x ) + 1;
 }
 
