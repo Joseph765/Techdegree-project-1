@@ -42,7 +42,10 @@ function getRandomQuote() {
 }
 
 function printQuote() {
-  quote.textContent = getRandomQuote();
+  randomQuote = getRandomQuote();
+  for (key in randomQuote) {
+    console.log(key, ":", key[randomQuote]);
+  }
 }
 
 printQuote();
