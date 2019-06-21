@@ -1,8 +1,6 @@
 let randomNumber;
-let quote = document.getElementById('quote');
-let source = document.getElementById('source');
-let citation = document.getElementById('citation');
-let year = document.getElementById('year');
+let randomQuote = '';
+let loadQuote = document.getElementById("#loadQuote");
 const quotes = [
 
   {
@@ -42,10 +40,29 @@ function getRandomQuote() {
 }
 
 function printQuote() {
-  randomQuote = getRandomQuote();
-  for (key in randomQuote) {
-    console.log(key, ":", key[randomQuote]);
-  }
+  getRandomQuote = getRandomQuote();
+  for (key in getRandomQuote) {
+    randomQuote =
+    `
+      <p class="quote">${getRandomQuote.quote}</p>
+        <p class="source">${getRandomQuote.source}</p>
+    `
+      if (getRandomQuote.citation) {
+        randomQuote +=
+        `
+        <span class="citation">${getRandomQuote.citation}</span>
+        `
+      }
+      if (getRandomQuote.year) {
+          randomQuote +=
+          `
+          <span class="year">${getRandomQuote.year}</span>
+          `
+        }
+    }
+  document.getElementById("quote-box").innerHTML = randomQuote;
 }
 
-printQuote();
+loadQuote.addEventListener('click', () => {
+  printQuote();
+});
