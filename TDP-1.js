@@ -6,27 +6,27 @@ let year = document.getElementById('year');
 const quotes = [
 
   {
-    Quote: 'A successful website does three things It attracts the right kinds of visitors. Guides them to the main services or product you offer. Collect Contact details for future ongoing relation.',
-    Person: 'Mohamed Saad'
+    quote: 'A successful website does three things It attracts the right kinds of visitors. Guides them to the main services or product you offer. Collect Contact details for future ongoing relation.',
+    source: 'Mohamed Saad'
   },
   {
-    Quote: 'What separates design from art is that design is meant to be... functional.',
-    Person: 'Cameron moll'
+    quote: 'What separates design from art is that design is meant to be... functional.',
+    source: 'Cameron moll'
   },
   {
-    Quote: 'A brilliant solution to the wrong problem can be worse than no solution at all: Solve the correct problem.',
-    Person: 'Donald A. Norman',
-    Citation: 'The Design of Everyday Things',
-    Year: 'November 5 2013'
+    quote: 'A brilliant solution to the wrong problem can be worse than no solution at all: Solve the correct problem.',
+    source: 'Donald A. Norman',
+    citation: 'The Design of Everyday Things',
+    year: 'November 5 2013'
   },
   {
-    Quote: 'Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of complexity to design and develop websites.',
-    Person: 'Jacob Lett',
-    Citation: 'Bootstrap 4 Quick Start: Responsive Web Design and Development Basics for Beginners'
+    quote: 'Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of complexity to design and develop websites.',
+    source: 'Jacob Lett',
+    citation: 'Bootstrap 4 Quick Start: Responsive Web Design and Development Basics for Beginners'
   },
   {
-    Quote: 'Measuring programming progress by lines of code is like measuring aircraft building progress by weight.',
-    Person: 'Bill Gates'
+    quote: 'Measuring programming progress by lines of code is like measuring aircraft building progress by weight.',
+    source: 'Bill Gates'
   }
 
 ];
