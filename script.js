@@ -1,6 +1,6 @@
 let randomNumber;
 let randomQuote = '';
-let loadQuote = document.getElementById("#loadQuote");
+let loadQuote = document.getElementById("loadQuote");
 const quotes = [
 
   {
