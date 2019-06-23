@@ -1,11 +1,12 @@
-let randomNumber;
+let randomNumber;                         //variable names I learned in unit 2
 let randomQuote = '';
 let loadQuote = document.getElementById("loadQuote");
-const quotes = [
+const quotes = [                          //This is the list of quotes
 
   {
     quote: 'A successful website does three things It attracts the right kinds of visitors. Guides them to the main services or product you offer. Collect Contact details for future ongoing relation.',
-    source: 'Mohamed Saad'
+    source: 'Mohamed Saad',
+    category: 'Web Design'
   },
   {
     quote: 'What separates design from art is that design is meant to be... functional.',
@@ -29,40 +30,71 @@ const quotes = [
 
 ];
 
-function getRandomNumber(x) {
-  return Math.floor( Math.random() * x ) + 1;
+const backgroundColors = [
+
+  '#b5368f',
+  '#5c36b5',
+  '#b55c36',
+  '#36b59c',
+  '#36b55c'
+
+]
+
+function getRandomNumber(x) {                 //This selects a number between 0 and "x" randomly
+  return Math.floor( Math.random() * x );
 }
 
 function getRandomQuote() {
-  randomNumber = getRandomNumber(4);
-  let quoteBlock = quotes[randomNumber];
+  randomNumber = getRandomNumber(4);          //All quotes are numbered between 0 and 4 in the array of objects
+  let quoteBlock = quotes[randomNumber];      //Created a variable to old the randomquote to return it on line 39
   return quoteBlock;
 }
 
+function getRandomColor() {
+  randomNumber = getRandomNumber(4);
+  return backgroundColors[randomNumber];
+}
+
+function setBackgroundColor() {                                         //sets the background color to random color when this function is called
+  document.body.style.backgroundColor = getRandomColor();               //learned form: https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
+}
+
 function printQuote() {
-  getRandomQuote = getRandomQuote();
-  for (key in getRandomQuote) {
-    randomQuote =
+  someRandomQuote = getRandomQuote();
+  for (key in someRandomQuote) {
+    randomQuote =                                       //Template literals I learned in unit 2
     `
-      <p class="quote">${getRandomQuote.quote}</p>
-        <p class="source">${getRandomQuote.source}</p>
+      <p class="quote">${someRandomQuote.quote}</p>
+        <p class="source">${someRandomQuote.source}</p>
     `
-      if (getRandomQuote.citation) {
+      if (someRandomQuote.citation) {
         randomQuote +=
         `
-        <span class="citation">${getRandomQuote.citation}</span>
+        <span class="citation">${someRandomQuote.citation}</span>
         `
       }
-      if (getRandomQuote.year) {
+      if (someRandomQuote.year) {
           randomQuote +=
           `
-          <span class="year">${getRandomQuote.year}</span>
+          <span class="year">${someRandomQuote.year}</span>
           `
         }
+      if (someRandomQuote.category) {
+        randomQuote +=
+        `
+        <span class="category">Category: ${someRandomQuote.category}</span>
+        `
+      }
     }
   document.getElementById("quote-box").innerHTML = randomQuote;
 }
 
-loadQuote.addEventListener('click', () => {
+loadQuote.addEventListener('click', () => {           //listenes for user to click button
   printQuote();
+  setBackgroundColor();
 });
+
+setInterval(function () {                            //After 20 seconds (20000 miliseconds), it calls the two functions to print the random quote, and set a random background color
+  printQuote();                                      //learned how to use this function from: https://www.youtube.com/watch?v=ubLC1JxMqfY
+  setBackgroundColor();
+}, 20000);
