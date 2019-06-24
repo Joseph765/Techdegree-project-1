@@ -65,7 +65,7 @@ function printQuote() {
     randomQuote =                                       //Template literals I learned in unit 2
     `
       <p class="quote">${someRandomQuote.quote}</p>
-        <p class="source">${someRandomQuote.source}</p>
+        <p class="source">${someRandomQuote.source}
     `
       if (someRandomQuote.citation) {
         randomQuote +=
@@ -85,6 +85,8 @@ function printQuote() {
         <span class="category">Category: ${someRandomQuote.category}</span>
         `
       }
+      randomQuote +=
+      `</p>`
     }
   document.getElementById("quote-box").innerHTML = randomQuote;
 }
